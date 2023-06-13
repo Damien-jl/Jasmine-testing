@@ -4,7 +4,7 @@ function sumPaymentTotal(type) {
   let total = 0;
 
   for (let key in allPayments) {
-    let payment = allPayments[key];
+    let payment = allPayments[key]; 
 
     total += Number(payment[type]);
   }

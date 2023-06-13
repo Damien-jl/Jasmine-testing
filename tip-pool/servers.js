@@ -2,7 +2,7 @@ let serverNameInput = document.getElementById('serverName');
 let serverForm = document.getElementById('serverForm');
 
 let serverTbody = document.querySelector('#serverTable tbody');
-
+ 
 let allServers = {};
 let serverId = 0;
 
@@ -13,7 +13,7 @@ function submitServerInfo(evt) {
   if (evt) evt.preventDefault(); // when running tests there is no event
 
   let serverName = serverNameInput.value;
-
+ 
   if (serverName !== '') {
     serverId++;
     allServers['server' + serverId] = { serverName };

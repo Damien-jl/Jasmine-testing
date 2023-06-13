@@ -1,5 +1,5 @@
 let billAmtInput = document.getElementById('billAmt');
-let tipAmtInput = document.getElementById('tipAmt');
+let tipAmtInput = document.getElementById('tipAmt'); 
 let paymentForm = document.getElementById('paymentForm');
 
 let paymentTbody = document.querySelector('#paymentTable tbody');
