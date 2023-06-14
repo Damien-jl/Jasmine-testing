@@ -24,10 +24,10 @@ describe("Servers test (with setup and tear-down)", function() {
     updateServerTable();
     let list = document.querySelectorAll('#serverTable tbody tr td')
     list[1].innerText = '$5.00'
-    expect(list.length).toBe(2)
+    expect(list.length).toBe(3)
     expect(list[0].innerText).toEqual('Alice');
     expect(list[1].innerText).toEqual('$5.00');
-    
+    expect(list[2].innerText).toEqual('X')
   })
  
   afterEach(function() {

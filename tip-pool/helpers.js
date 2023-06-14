@@ -24,3 +24,24 @@ function appendTd(tr, value) {
 
   tr.append(newTd);
 }
+//these functions are from the solution
+//we are appending a delete button that will erase all servers from the allServers object
+function appendDeleteBtn(tr,type) {
+  //for type we will be inputing 'payment', and 'servers'
+  let td = document.createElement('td');
+  //we are creating a td for the deleteBtn
+  td.innerText = 'X';
+
+  td.addEventListener('click', removeEle);
+  tr.append(td);
+}
+
+function removeEle(evt) {
+  let ele = evt.target.closest('tr');
+//whenever the deleteBtn is clicked the tr containing the td will be deleted
+
+  delete allServers[ele.id];
+//this deletes the td inside of the deleted tr
+  ele.parentNode.removeChild(ele);
+  updateServerTable()
+}

@@ -55,6 +55,8 @@ function appendPaymentTable(curPayment) {
   appendTd(newTr, '$' + curPayment.billAmt);
   appendTd(newTr, '$' + curPayment.tipAmt);
   appendTd(newTr, curPayment.tipPercent + '%');
+  //this will remove the tr with the id of payment
+  appendDeleteBtn(newTr,'payment');
 
   paymentTbody.append(newTr);
 }

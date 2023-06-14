@@ -12,6 +12,13 @@
         expect(calculateTipPercent(100,20)).toEqual(20);
         expect(calculateTipPercent(200,50)).toEqual(25)
     })
+
+    it('should add a tr on appendDeleteBtn()', function () {
+        let tr = document.createElement('tr');
+        appendDeleteBtn(tr);
+        expect(tr.firstChild.innerHTML).toEqual('X')
+    })
+
     afterEach(function () {
         billAmtInput.value = '';
         tipAmtInput.value = '';
